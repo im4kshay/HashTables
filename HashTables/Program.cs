@@ -12,6 +12,8 @@ namespace HashTables
         {
             //Welcome Message
             Console.WriteLine("=-=-=-=-=-Welcome To The Hash Tables Program-=-=-=-=-=");
+
+            Console.ReadLine();
         }
     }
 }
