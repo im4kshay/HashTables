@@ -36,11 +36,6 @@ namespace HashTables
             Console.WriteLine("-----------------------------------------------");
 
             myMapNode.Display();
-            //for (key = 0; key < paragraph.Length; key++)
-            //{
-            //    string value = myMapNode.Get(key);
-            //    Console.WriteLine(key + " - " + value);
-            //}
 
             Console.WriteLine("-----------------------------------------------");
             Console.WriteLine("After Removing avoidable word from the phrase");
@@ -50,6 +45,7 @@ namespace HashTables
             myMapNode.Remove(17);
 
             myMapNode.Display();
+
             Console.WriteLine("-----------------------------------------------");
             Console.WriteLine("-----------------------------------------------");
             Console.ReadLine();
