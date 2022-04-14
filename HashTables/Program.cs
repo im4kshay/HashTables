@@ -31,16 +31,13 @@ namespace HashTables
             }
 
             //Display
+            Console.WriteLine("--------------------------------");
             Console.WriteLine("frequency of words ");
             Console.WriteLine("--------------------------------");
-            
 
-            for (key = 0; key < paragraph.Length; key++)
-            {
-                string value = myMapNode.Get(key);
-                Console.WriteLine(key + " - " + value);
-            }
-
+            myMapNode.Display();
+        
+            Console.WriteLine("--------------------------------");
             Console.WriteLine("--------------------------------");
             Console.ReadLine();
         }

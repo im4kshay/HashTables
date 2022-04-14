@@ -124,7 +124,7 @@ namespace HashTables
                     {
                         string res = element.ToString();
                         if (res != null)
-                            Console.WriteLine(element.Key + " " + element.Value);
+                            Console.WriteLine(element.Key + " - " + element.Value);
                     }
             }
         }
