@@ -13,24 +13,34 @@ namespace HashTables
             //Welcome Message
             Console.WriteLine("=-=-=-=-=-Welcome To The Hash Tables Program-=-=-=-=-=");
 
+            //Variable
+            int key = 0;
+
+            //Paragraph words assign to array
+            string paragraphPhrase = "To be or not to be";
+            string[] paragraph = paragraphPhrase.Split(' ');
+
             //Object of class MyMapNode
-            MyMapNode<string, string> myMapNode = new MyMapNode<string, string>(5);
+            MyMapNode<int, string> myMapNode = new MyMapNode<int, string>(paragraph.Length);
 
-            //Add data
-            myMapNode.Add("0", "To");
-            myMapNode.Add("1", "be");
-            myMapNode.Add("2", "or");
-            myMapNode.Add("3", "not");
-            myMapNode.Add("4", "to");
-            myMapNode.Add("5", "be");
+            //Add 
+            foreach (string word in paragraph)
+            {
+                myMapNode.Add(key, word);
+                key++;
+            }
 
-            //Get Value and Display
-            string hash5 = myMapNode.Get("5");
-            Console.WriteLine("5th index  value: " + hash5);
+            //Display
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine("frequency of words ");
+            Console.WriteLine("--------------------------------");
 
-            //Get Value and Display
-            string hash2 = myMapNode.Get("2");
-            Console.WriteLine("2nd index  value: " + hash2);
+
+            myMapNode.Display();
+
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine("--------------------------------");
+            Console.ReadLine();
 
             Console.ReadLine();
         }
