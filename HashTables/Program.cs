@@ -18,7 +18,7 @@ namespace HashTables
 
             //Paragraph words assign to array
             string paragraphPhrase = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
-            string[] paragraph = paragraphPhrase.Split(new[] {' '});
+            string[] paragraph = paragraphPhrase.Split(' ');
 
             //Object of class MyMapNode
             MyMapNode<int, string> myMapNode = new MyMapNode<int, string>(paragraph.Length);
@@ -31,15 +31,27 @@ namespace HashTables
             }
 
             //Display
-            Console.WriteLine("frequency of words ");
-            Console.WriteLine("-------------------");
+            Console.WriteLine("-----------------------------------------------");
+            Console.WriteLine("Before Removing avoidable word from the phrase");
+            Console.WriteLine("-----------------------------------------------");
 
-            for (key = 0; key < paragraph.Length; key++)
-            {
-                string value = myMapNode.Get(key);
-                Console.WriteLine(key + " - " + value);
-            }
+            myMapNode.Display();
+            //for (key = 0; key < paragraph.Length; key++)
+            //{
+            //    string value = myMapNode.Get(key);
+            //    Console.WriteLine(key + " - " + value);
+            //}
 
+            Console.WriteLine("-----------------------------------------------");
+            Console.WriteLine("After Removing avoidable word from the phrase");
+            Console.WriteLine("-----------------------------------------------");
+
+            //Removing avoidable
+            myMapNode.Remove(17);
+
+            myMapNode.Display();
+            Console.WriteLine("-----------------------------------------------");
+            Console.WriteLine("-----------------------------------------------");
             Console.ReadLine();
         }
     }
